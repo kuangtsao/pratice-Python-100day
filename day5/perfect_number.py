@@ -12,10 +12,10 @@
 for perfect in range(1,10000):
     sum = 0
     for divisor in range(1, perfect):
-        if perfect % divisor == 0:
+        if perfect % divisor == 0 and perfect != divisor:
             sum += divisor
-            if sum == perfect + 1:
-                print(sum)
+            if sum == perfect:
+                print(perfect)
         
 
 
