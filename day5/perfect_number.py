@@ -9,14 +9,15 @@
 
 """
 
-for perfect in range(1,10000):
+for number in range(1,10000):
     sum = 0
-    for divisor in range(1, perfect):
-        if perfect % divisor == 0 and perfect != divisor:
-            sum += divisor
-            if sum == perfect:
-                print(perfect)
-        
+    for divisor in range(1, number):
+    #range -> 1 <= divisor < number ，恰好可排除自身  
+        if number % divisor == 0:
+            sum += divisor            
+    if sum == number:
+        print(number)
+    #為何要放在第一層？原因就是我們要找那個數字而非因數！    
 
 
 
